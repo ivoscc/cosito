@@ -1,4 +1,4 @@
 # cat config.ru
-require "./server"
+require "./app"
 
  run Cuba
