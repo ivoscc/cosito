@@ -1,6 +1,9 @@
 require "json"
 require "cuba"
 
+require "cuba/render"
+
+Cuba.plugin Cuba::Render
 Cuba.use Rack::Session::Cookie,
   secret: "__a_very_long_string__"
 
@@ -24,7 +27,7 @@ end
 Cuba.define do
   on get do
     on root do
-      res.write "ollanta in the house"
+      res.write render("home.erb", content: "hello, world")
     end
 
     on "get_data" do
