@@ -6,6 +6,10 @@ require "cuba/render"
 Cuba.use Rack::Session::Cookie,
   secret: "__a_very_long_string__"
 
+Cuba.use Rack::Static,
+  root: "public",
+  urls: ["/js", "/css", "/less", "/img"]
+
 Cuba.plugin Cuba::Render
 $data = [
     "Noticia 1",
@@ -29,5 +33,10 @@ Cuba.define do
     on "get_data" do
         res.write get_random_new()
     end
+
+    on "css", extension("css") do |file|
+      res.write "Filename: #{file}" #=> "Filename: basic"
+    end
+
   end
 end
