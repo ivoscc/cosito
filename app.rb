@@ -5,7 +5,7 @@ require "cuba/render"
 
 Cuba.plugin Cuba::Render
 Cuba.use Rack::Session::Cookie,
-  secret: "__a_very_long_string__"
+  secret: "7sTTN7CDX2rL8QPBJCrzeGBUHmb3mZqyDHV5Lvc5KSPZhqU2"
 
 Cuba.use Rack::Static,
   root: "public",
