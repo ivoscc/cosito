@@ -1,0 +1,17 @@
+body {
+  background: url('../img/zebra.png') #2d58c4;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#header {
+  height: 100px;
+}
+
+#fact {
+  min-height: 500px;
+}
+
