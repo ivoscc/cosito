@@ -22,33 +22,24 @@ $data = [
 $JSON_NAME = "data.json"
 
 def read_json_news( filename )
-    begin
-        JSON.parse(IO.read(filename))
-    rescue => _
-        [{}]
-    end
+    JSON.parse(IO.read(filename))
 end
 
 def get_random_new()
     r = Random.new
     json_data = read_json_news($JSON_NAME)
     r_number = r.rand(0..json_data.length-1)
-    json_data[r_number]["data"]
+    json_data["data"][r_number]
 end
 
 Cuba.define do
   on get do
     on root do
-      res.write render("home.erb", content: "hello, world")
+      res.write render("home.erb", trivia:get_random_new() )
     end
 
     on "get_data" do
-        res.write get_random_new()
+        res.write JSON.generate(get_random_new())
     end
-
-    on "css", extension("css") do |file|
-      res.write "Filename: #{file}" #=> "Filename: basic"
-    end
-
   end
 end
