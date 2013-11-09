@@ -50,6 +50,7 @@ Cuba.define do
     end
 
     on "get_data" do
+        res['Content-Type'] = 'application/json'
         res.write JSON.generate(get_random_new())
     end
   end
