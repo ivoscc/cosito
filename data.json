@@ -1,17 +1,68 @@
-[
-  {
-    "data": "Noticia 1"
-  },
-  {
-    "data": "Noticia 2"
-  },
-  {
-    "data": "Noticia 3"
-  },
-  {
-    "data": "Noticia 4"
-  },
-  {
-    "data": "Noticia 5"
-  }
-]
+{
+    "data": [
+        {
+            "title": "Ollanta Humala firma tratado con dilma Rouseff para que peruanos puedan trabajar en dicho pais con solo DNI",
+            "url": "http://redaccion.lamula.pe/2013/11/08/el-dni-sera-suficiente-para-trabajar-en-brasil/dianachirinos/"
+        },
+        {
+            "title": "Según última encuesta de CPI, el 71,4 % desaprueba gestión de Ollanta Humala",
+            "url": "http://redaccion.lamula.pe/2013/11/08/y-sigue-bajando/dianachirinos/"
+        },
+        {
+            "title": "Ollanta Humala dice que no hubo ningún impasse con Nadine Heredia",
+            "url": "http://peru21.pe/politica/ollanta-humala-dice-que-no-hubo-impasse-nadine-heredia-2045059"
+        },
+        {
+            "title": "Ollanta Humala considera de urgente necesidad la adquisición de un satélite para un uso multisectorial.",
+            "url": "http://www.rpp.com.pe/2013-08-26-peru-tendra-su-propio-satelite-el-primer-semestre-del-2014-noticia_625519.html"
+        },
+        {
+            "title": "Capturó al camarada Artemio",
+            "url": "http://diariocorreo.pe/ultimas/noticias/EPENSA-068484/operacion-crepusculo-permitio-captura-de-camarada-artemio"
+        },
+        {
+            "title": "Ollanta Humala inaugura obras en región San Martín",
+            "url": "http://www.larepublica.pe/24-10-2013/ollanta-humala-inaugura-obras-en-region-san-martin"
+        },
+        {
+            "title": "Nacionalizó lote 88 del gas de camisea para consumo local",
+            "url": "http://www.horizonteminero.com/articulos/amineria/807-lote-88-en-manos-peruanas.html"
+        },
+        {
+            "title": "Creó el programa Pensión 65 para favorecer a los peruanos de más de 65 años que no contaban con una pensión",
+            "url": "http://www.pension65.gob.pe/"
+        },
+        {
+            "title": "Entregó200millonesdesolesparaobrasenLambayeque",
+            "url": "http: //www.larepublica.pe/18-08-2013/humala-entregara-a-acuna-200-millones-de-soles-para-obras-en-lambayeque"
+        },
+        {
+            "title": "ImplementoelProgramaBeca18",
+            "url": "http: //elcomercio.pe/actualidad/1533778/noticia-ollanta-humala-pidio-gobiernos-regionales-replicar-programa-beca-18"
+        },
+        {
+            "title": "Promulgólaleydeconsultapreviaalaspoblacionesindígenas",
+            "url": "http: //www.larepublica.pe/06-09-2011/presidente-humala-promulgo-ley-de-consulta-previa-en-bagua"
+        },
+        {
+            "title": "Inauguró obras de agua y alcantarillado en Lambayeque",
+            "url": "http: //www.tvperu.gob.pe/noticias/actividades-presidenciales/50398-presidente-humala-inauguro-obras-de-agua-y-alcantarillado-en-reque.html"
+        },
+        {
+            "title": "Ollanta Humala presentó nuevos patrulleros inteligentes que resguardarán Lima y Callao",
+            "url": "http: //www.tvperu.gob.pe/noticias/actividades-presidenciales/51841-presidente-humala-presentara-nuevos-patrulleros-inteligentes.html"
+        },
+        {
+            "title": "InauguraseisbasescontraterroristasenelVRAEM",
+            "url": "http: //peru21.pe/politica/inauguran-seis-bases-contraterroristas-vraem-2152227"
+        }
+    ],
+    "phrases": [
+        "Otra más!!",
+        "¿Eso es todo?",
+        "Bueno ¿y?",
+        "No me impresiona",
+        "¿Qué más ha hecho?",
+        "A ver,¿quémás?"
+    ]
+}
