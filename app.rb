@@ -1,8 +1,9 @@
+require "json"
 require "cuba"
 
 require "cuba/render"
 
-
+Cuba.plugin Cuba::Render
 Cuba.use Rack::Session::Cookie,
   secret: "__a_very_long_string__"
 
@@ -18,10 +19,21 @@ $data = [
     "Noticia 4",
     "Noticia 5",
 ]
+$JSON_NAME = "data.json"
+
+def read_json_news( filename )
+    begin
+        JSON.parse(IO.read(filename))
+    rescue => _
+        [{}]
+    end
+end
 
 def get_random_new()
     r = Random.new
-    $data[r.rand(0..$data.length-1)]
+    json_data = read_json_news($JSON_NAME)
+    r_number = r.rand(0..json_data.length-1)
+    json_data[r_number]["data"]
 end
 
 Cuba.define do
