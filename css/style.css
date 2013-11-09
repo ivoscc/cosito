@@ -1,5 +1,6 @@
 body {
   background: url('../img/zebra.png') #2d58c4;
+  text-align: center;
 }
 
 #container {
@@ -11,7 +12,36 @@ body {
   height: 100px;
 }
 
+#title {
+  color: #FFDE84;
+  font-variant: small-caps;
+  font-size: 20px;
+  text-shadow: 0 0 3px #2D58C4;
+  width: 361px;
+  height: 58px;
+  margin: 30px auto 30px;
+  background-repeat: no-repeat;
+}
+
 #fact {
-  min-height: 500px;
+}
+
+#fact .description {
+  font-size: 48px;
+  font-family: 'Neuton', georgia, serif;
+  line-height: 42px;
+}
+
+#fact .source {
+
+}
+
+#fact .button {
+  display: inline-block;
+}
+
+#footer {
+  background-color: #a00;
+  height: 100px;
 }
 
