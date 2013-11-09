@@ -13,12 +13,16 @@ body {
 }
 
 #title {
-  color: #FFDE84;
+  background-color: #eee;
+  border-top: 15px solid #e00;
+  border-bottom: 15px solid #e00;
+  color: #a00;
   font-variant: small-caps;
   font-size: 20px;
-  text-shadow: 0 0 3px #2D58C4;
+  line-height: 38px;
+  height: 38px;
+  text-shadow: 0 0 3px #a55;
   width: 361px;
-  height: 58px;
   margin: 30px auto 30px;
   background-repeat: no-repeat;
 }
@@ -34,7 +38,16 @@ body {
 }
 
 #fact .source {
+  margin-top: 20px;
+}
 
+#fact .source a {
+  color: #faa;
+  font-style: italic;
+}
+
+#fact .source a:hover {
+  color: #fff;
 }
 
 #fact .button {
@@ -60,7 +73,7 @@ body {
   height: 100px;
   position: absolute;
   bottom: 0;
-  text-align: right;
   color: #aff;
+  padding-top: 20px;
 }
 
