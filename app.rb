@@ -30,8 +30,9 @@ end
 def get_random_new()
     r = Random.new
     json_data = read_json_news($JSON_NAME)
+    puts json_data
     data_top = json_data["data"].length-1
-    phrase_top = json_data["phrase"].length-1
+    phrase_top = json_data["phrases"].length-1
     if data_top < 0
         data_top = 0
     end
@@ -39,23 +40,19 @@ def get_random_new()
         phrase_top = 0
     end
     data = json_data["data"][r.rand(0..data_top)]
-    phrase = json_data["phrase"][r.rand(0..phrase_top)]
+    phrase = json_data["phrases"][r.rand(0..phrase_top)]
     {'phrase' => phrase, 'title' => data['title'], 'url'=> data['url']}
 end
 
 Cuba.define do
   on get do
     on root do
-      res.write render("home.erb", content: "hello, world", data: get_random_new())
+      res.write render("home.erb", trivia:get_random_new() )
     end
 
     on "get_data" do
-        res.write get_random_new()
+        res.write JSON.generate(get_random_new())
     end
-
-    on "css", extension("css") do |file|
-      res.write "Filename: #{file}" #=> "Filename: basic"
-    end
-
   end
 end
+
