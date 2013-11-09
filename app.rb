@@ -40,7 +40,7 @@ def get_random_new()
     end
     data = json_data["data"][r.rand(0..data_top)]
     phrase = json_data["phrases"][r.rand(0..phrase_top)]
-    {'phrase' => phrase, 'title' => data['title'], 'url'=> data['url']}
+    {'phrase' => phrase, 'title' => data['title'], 'url'=> data['url'].delete(' ')}
 end
 
 Cuba.define do
