@@ -1,4 +1,4 @@
-# cat config.ru
+#!/usr/bin/env ruby
 require "./app"
 
- run Cuba
+run Cuba
