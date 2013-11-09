@@ -11,35 +11,42 @@ Cuba.use Rack::Static,
   root: "public",
   urls: ["/js", "/css", "/less", "/img"]
 
-Cuba.plugin Cuba::Render
-$data = [
-    "Noticia 1",
-    "Noticia 2",
-    "Noticia 3",
-    "Noticia 4",
-    "Noticia 5",
-]
 $JSON_NAME = "data.json"
 
 def read_json_news( filename )
     begin
         JSON.parse(IO.read(filename))
     rescue => _
-        [{}]
+        {
+            "data" => [{
+                "title" =>  "",
+                "url" => ""
+            }],
+            "phrase" => []
+        }
     end
 end
 
 def get_random_new()
     r = Random.new
     json_data = read_json_news($JSON_NAME)
-    r_number = r.rand(0..json_data.length-1)
-    json_data[r_number]["data"]
+    data_top = json_data["data"].length-1
+    phrase_top = json_data["phrase"].length-1
+    if data_top < 0
+        data_top = 0
+    end
+    if phrase_top < 0
+        phrase_top = 0
+    end
+    data = json_data["data"][r.rand(0..data_top)]
+    phrase = json_data["phrase"][r.rand(0..phrase_top)]
+    {'phrase' => phrase, 'title' => data['title'], 'url'=> data['url']}
 end
 
 Cuba.define do
   on get do
     on root do
-      res.write render("home.erb", content: "hello, world")
+      res.write render("home.erb", content: "hello, world", data: get_random_new())
     end
 
     on "get_data" do
